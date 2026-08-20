@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Document Processing System</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>AI Document Processing System</h1>
+
+        <p>
+            Upload an invoice, resume, or marksheet
+            for automatic document processing.
+        </p>
+
+        <div class="upload-box">
+
+            <h2>Upload Document</h2>
+
+            <form action="/upload"
+                  method="post"
+                  enctype="multipart/form-data">
+
+                <input
+                    type="file"
+                    name="file"
+                    accept=".pdf,.jpg,.jpeg,.png"
+                    required
+                >
+
+                <button type="submit">
+                    Upload Document
+                </button>
+
+            </form>
+
+            {% if message %}
+
+            <p class="success">
+                {{ message }}
+            </p>
+
+            {% endif %}
+
+            {% if error %}
+
+            <p class="error">
+                {{ error }}
+            </p>
+
+            {% endif %}
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
