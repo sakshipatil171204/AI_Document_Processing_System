@@ -1,0 +1,8 @@
+INVOICE
+Invoice Number: INV001
+Date: 18 August 2026
+Customer: ABC Technologies
+Item: Laptop
+Quantity: 1
+Amount: 45000
+Total: 45000

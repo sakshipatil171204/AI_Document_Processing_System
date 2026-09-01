@@ -1,0 +1,10 @@
+STUDENT MARKSHEET
+Student Name: Ananya Patil
+Roll Number: MCA101
+Python: 82
+DBMS: 78
+Java: 88
+Data Structures: 85
+Networking: 74
+Total: 407
+Percentage: 81.4%

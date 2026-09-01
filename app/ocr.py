@@ -1,5 +1,7 @@
 from paddleocr import PaddleOCR
 import os
+import sys
+import json
 
 
 # Create OCR object
@@ -8,13 +10,23 @@ ocr = PaddleOCR(
 )
 
 
-# Image to process
-image_path = "dataset/invoice/invoice01.png"
+# Get image path from command line
+if len(sys.argv) < 2:
+    print("Please provide an image path.")
+    print("Example: python app/ocr.py dataset/invoice/invoice01.png")
+    sys.exit(1)
+
+image_path = sys.argv[1]
+
+
+# Check if image exists
+if not os.path.exists(image_path):
+    print(f"Image not found: {image_path}")
+    sys.exit(1)
 
 
 # Folder where OCR text will be saved
 output_folder = "data/ocr_text"
-
 os.makedirs(output_folder, exist_ok=True)
 
 
@@ -26,16 +38,20 @@ result = ocr.predict(image_path)
 all_text = []
 
 for res in result:
-    if hasattr(res, "json"):
-        data = res.json
 
-        # Handle JSON data
-        if isinstance(data, str):
-            import json
-            data = json.loads(data)
+    # Get JSON result
+    data = res.json
 
-        if "rec_texts" in data:
-            all_text.extend(data["rec_texts"])
+    if isinstance(data, str):
+        data = json.loads(data)
+
+    # PaddleOCR 3.x stores the result inside "res"
+    if "res" in data:
+        data = data["res"]
+
+    # Get recognized text
+    if "rec_texts" in data:
+        all_text.extend(data["rec_texts"])
 
 
 # Create output filename
@@ -62,3 +78,4 @@ with open(
 
 print("OCR completed successfully!")
 print(f"Text saved to: {output_file}")
+print(f"Number of text lines extracted: {len(all_text)}")

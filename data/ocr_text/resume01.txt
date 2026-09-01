@@ -1,0 +1,13 @@
+RESUME
+Name: Rahul Sharma
+Email: rahul@example.com
+Education:
+MCA - XYZ University
+Skills:
+Python
+Java
+SQL
+HTML
+CSS
+Experience:
+Fresher
