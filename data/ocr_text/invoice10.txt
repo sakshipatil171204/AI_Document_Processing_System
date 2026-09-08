@@ -1,0 +1,86 @@
+Invoice no: 60991397
+Date of issue:
+02/25/2021
+Seller:
+Client:
+Blair LLC
+Gomez, Hall and Boyd
+9845 Cook Roads
+1325Robert Junction
+West Williamville, GA 05056
+Port Erika, ID 22552
+Tax Id: 914-95-7815
+Tax Id: 918-72-7408
+IBAN: GB04RGGJ85647081589357
+ITEMS
+No.
+Description
+Qty
+UM
+Net price
+Net worth
+VAT [%]
+Gross
+worth
+1.
+Leed's Wine Companion Bottle
+2,00
+each
+7,50
+15,00
+10%
+16,50
+Corkscrew Opener Gift Box Set
+with Foil Cutter
+2.
+Outdoor Wine Glass Beer Holder
+4,00
+each
+11,44
+45,76
+10%
+50,34
+To Armrest With Attachments
+Red Wine Base _yoxq
+3.
+Wine Rack Holder Iron Art
+4,00
+each
+18,75
+75,00
+10%
+82,50
+Hanging Racks Glass Cup
+Stemware Shelf Mounted 2
+Color
+4,00
+each
+19,98
+79,92
+10%
+87,91
+4.
+Anthropologie Gold Elegant
+Swan Decorative Metal Bottle
+Stopper Wine Saver
+4,00
+each
+10,00
+40,00
+10%
+44,00
+5.
+Refinery Wine Opener
+SUMMARY
+VAT [%]
+Net worth
+VAT
+Gross worth
+10%
+255,68
+25,57
+281,25
+Total
+$ 255,68
+$ 25,57
+$ 281,25
