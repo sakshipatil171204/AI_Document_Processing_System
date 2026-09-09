@@ -1,0 +1,69 @@
+TAYLOR FOSTER
+Testing Engineer
+(928)
+@taylor_foster37@gmail.com
+last-beck.info
+West Gardner, Maldives
+SUMMARY
+MY LIFE PHILOSOPHY
+Experienced Testing Engineer with a strong background in
+Security is not a product, but a
+embedded security testing. Proven ability to lead and perform
+process.
+advanced security testing engagements for connected car
+systems. Skilled in analyzing security requirements,
+generating test specifications, and identifying implementation
+STRENGTHS
+flaws. Proficient in C, C++,Python, and reverse engineering
+tools. Bachelor's degree in Electrical Engineering. Passionate
+Analytical Thinking
+about contributing to Toyota's cybersecurity posture and
+Demonstrated strong analytical thinking
+staying up to date on new attack vectors and vulnerabilities.
+skills through the successful
+Excellent communication skills and ability to work in individual
+identification and mitigation of complex
+and group settings. Committed to ensuring secure automotive
+security vulnerabilities in embedded
+technology.
+systems.
+Effective Communication
+EXPERIENCE
+Excellent verbal and written
+communication skills, effectively
+conveying complex technical findings
+Embedded Security Testing Engineer
+and remediation guidance to technical
+Toyota
+and non-technical stakeholders.
+2022 - Ongoing
+Plano, TX
+Led and performed advanced security testing engagements for current
+Leadership
+and forward-model systems in Toyota's Connected Car ecosystem.
+Proven leadership abilities through the
+Analyzed security requirements, generated test specifications, and
+successful coordination and execution of
+executed security tests to ensure implementation sufficiency.
+security testing engagements and the
+Conducted pen testing and reverse engineering against embedded
+mentoring of junior team members.
+hardware and firmware, resulting in the identification of implementation
+flaws. Communicated complex technical findings and provided
+remediation guidance to technical and non-technical staff.
+• Analyzed security requirements specifications and generated
+corresponding test specifications for various products during the
+design phase.
+Led and performed execution of security test specifications during
+the verification phase, ensuring the implementation of specified
+security requirements.
+Conducted pen testing and reverse engineering against embedded
+hardware and firmware, identifying implementation flaws and
+providing remediation guidance.
+Communicated complex technical findings and recommendations
+effectively to technical and non-technical staff.
+Contributed to research on new attack vectors, vulnerabilities, and
+exploitation techniques in the automotive industry.
+Participated in technology security design reviews, efficiently
+communicating potential issues and risks.
+2 Enboncy

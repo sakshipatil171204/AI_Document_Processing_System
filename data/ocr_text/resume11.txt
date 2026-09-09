@@ -1,0 +1,72 @@
+CHARLOTTE MAY
+Python Developer
+602.765.9016
+@charlotte.may87@yahoo.com
+simplistic-backyard.net
+Pollichburgh, Indonesia
+SUMMARY
+MY LIFE PHILOSOPHY
+Experienced Python Developer with 5+ years of expertise in
+Hard work beats talent when talent
+designing and implementing scalable API solutions. Proficient in
+Python and Java development, with a strong working knowledge
+doesn't work hard, - Tim Notke
+of AWS services and REST API integration. Collaborative team
+player, skilled in mentoring junior developers and leading
+STRENGTHS
+technical initiatives. Proven track record of delivering high-
+quality products through problem-solving, adaptability, and
+effective collaboration. Holds a Bachelor's degree in Computer
+Problem-solving
+Science and is AWS Certified. Enthusiastic about leveraging
+Successfully resolved complex technical
+technical skills and experience to contribute effectively to a
+issues resulting in improved efficiency and
+dynamic and innovative organization.
+reduced downtime.
+Collaboration
+EXPERIENCE
+Proven track record of working effectively
+in cross-functional teams, fostering
+teamwork and driving project success.
+Python Developer
+Tech Solutions
+Adaptability
+2022 - Ongoing
+London, UK
+Quickly adapt to new technologies and
+Designed and implemented Python-based AWS Lambda APIs, resulting in
+frameworks, staying up-to-date with
+improved performance and scalability of the API Management system.
+industry trends to deliver cutting-edge
+• Developed new features and functionalities using Python, integrating
+solutions.
+with REST APIs and implementing JSON-based communication.
+Collaborated with Solutions Architect to design and deliver product
+enhancements, ensuring alignment with business reguirements.
+SKILLS
+Mentored junior developers, providing technical guidance and fostering
+professional growth within the team.
+Python
+Java
+AWS Lambda
+Java Developer
+REST APIs
+JSON
+Spring
+Innovative Technologies
+2017 - 2022 New York, USA
+Spring Boot
+Git/GitHub
+Maven
+Built Java classes to extend the API Management platform and ensured
+optimal utilization of resources.
+Linux
+Bash scripting
+• Implemented unit tests using Junit and Mockito, resulting in improved
+DevOps
+quality and reliability of the codebase.
+Worked on live products, providing support and resolving critical issues
+within tight deadlines.
+Collaborated with cross-functional teams to integrate third-party APIs,
+enhancing system capabilities.

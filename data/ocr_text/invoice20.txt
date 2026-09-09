@@ -1,0 +1,36 @@
+BEYOND DIGITAL IMAGING
+36 Apple Creek Blvd.
+MARKHAM
+Flora Landscape Management
+Invoice
+Bill To:
+BEYOND DIGITAL IMAGING
+Invoice number:
+PO-700329
+Date: Oct. 28, 2023
+MARKHAM
+Term:
+NET 7
+L3R 4Y4
+due_date: Nov. 13, 2023
+Description
+Amount
+DC 748 Non-Corrosive Sealant
+$8
+3M 30NF Fastbond NEUTRAL 5 gal
+$333
+DC RTV-3145 Silicone Grey 90ml
+$25
+3M EC-3524 VoidFillCmpndBLUE 1/2gal-kit
+$181
+Subtotal
+$4439
+TAX 0%
+$0.00
+Total
+$4439
+Paid
+$1785
+$0.00
+Balance Due
+Paid

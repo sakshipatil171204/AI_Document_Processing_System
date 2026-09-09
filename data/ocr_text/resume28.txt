@@ -1,0 +1,36 @@
+Dot Net Developer
+Contact Details
+Summary
+allanhills@gmail.com
+Experienced Dot Net Developer with 5+ years of developing and
+implementing web applications. Skilled in C#, ASP.NET, HTML, CSS, and
+(508) 001 6691
+JavaScript. Proven track record of successful projects.
+New Jayde, 38184, Texas
+Work Experience
+Education
+Dot Net Developer, Shanahan - O'Kon
+Bachelor of Science in
+March 2023 - Present
+Computer Science
+• Developed web applications using ASP.NET, C#, and SQL Server.
+University of California,
+Implemented user interface design using HTML, CSS, and
+Berkeley
+JavaScript.
+2017-2021
+Assisted in the design and development of WCF services.
+Dot Net Developer, Deckow - Bode
+Skills
+May 2021 - February 2023
+• Created stored procedures and functions in SQL Server.
+C# programming - Expert
+Developed unit tests using NUnit and MSTest frameworks.
+ASP.Net - Expert
+Developed and maintained web services using WCF.
+SQL Server - Expert
+References
+MVC Framework - Expert
+References available upon request
+.Net Core - Expert
+Web API - Expert
