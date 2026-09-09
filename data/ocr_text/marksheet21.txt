@@ -1,0 +1,141 @@
+Back
+Print
+Dr. Babasaheb Ambedkar Marathwada University
+University Campus, Chhatrapati Sambhajinagar-431004, Maharashtra(India), Recognized by UGC U/s 2(f) and 12(B), NAAC Reaccredited
+with "A+" Grade
+Statement of Grade for
+Faculty of Science and Technology B.C.A.(Science) Second Year (P-2022)-Fourth Semester Examination: Apr/May-2025
+Name: MARKAD PAYAL VIKRAM
+Mother's Name: SANGEETA
+PRN: 2023015200163373
+Seat Number: CAP040326
+College: Deogiri College, Chhatrapati Sambhajinagar, Chhatrapati Sambhajinagar (03)
+Exam Center: 501-Z3
+Exam Venue Code: 09
+Paper Code
+Paper Name
+Credits
+Grade
+Grade Points
+Eaned Gr
+Remark
+Obtained
+Points
+Fourth
+Seat Number : CAP040326
+Exam: Apr/May-2025
+Semester
+TC005401
+Core Java
+2.00
+A++
+8.99
+17.98
+E.C
+早402
+at in
+2.00
+A
+6.99
+13.98
+E,C
+TC005403
+Computer Networks
+2.00
+A
+6.99
+13.98
+E,C
+TC005404
+Software Engineering
+2.00
+A
+6.99
+13.98
+E,C
+TC005405
+Data Analytics
+2.00
+B+
+5.99
+11.98
+E,C
+TC005406
+Open Source Web Application Development
+2.00
+B+
+5.99
+11.98
+E,C
+TC005407
+Communication Skill English-IV
+3.00
+A
+6.99
+20.97
+E,C
+TC005408
+Marathi
+3.00
+A+
+7.99
+23.97
+E,C
+TC005412
+(C) Basic Python Programming
+2.00
+A++
+8.99
+17.98
+E,C
+PC005401
+Lab Course based on TC005301,
+6.00
+A
+6.99
+41.94
+E,C
+TC005302,TC005401,TC005402
+PC005402
+Lab Course based on TC005303,
+6.00
+A+
+7.99
+47.94
+E,C
+TC005304,TC005403,TC005404
+PC005403
+Lab Course based on TC005305,
+6.00
+A+
+7.99
+47.94
+E,C
+TC005306,TC005405,TC005406
+Credits:38.00
+EGP:284.62
+SGPA:7.49
+Status:PASS
+Grade:A+
+Third Semester (Seat No: CAP030088 Exam Event: Oct/Nov-2024)
+Credits:20.00
+EGP:142.82
+SGPA:7.14
+Status:PASS
+Grade:A+
+Second Semester (Seat No: CAP020086 Exam Event: Apr/May-2024)
+Credits:27.00
+EGP:200.73
+SGPA:7.43
+Status:PASS
+Grade:A+
+First Semester (Seat No: CAP010047 Exam Event: Apr/May-2024)
+Credits:18.00
+EGP:97.82
+SGPA:5.43
+Status:PASS
+Grade:B
+:-
+Abbreviations: Gr: Grade, SGPA: Semester Grade Point Average, CGPA: Cumulative Grade Point Average, EGP: Earned Grade Points, E: Exempted, C:
+Current Appearance, X: Past Performance, N: Not Exempted, #:Additional Credits-Honors/Minor
+Result Declared On: 27 Jun 2025

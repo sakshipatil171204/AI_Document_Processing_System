@@ -1,0 +1,156 @@
+IE-Edge 7>
+Statement of Grade for
+Faculty of Science and Technology B.C.A.(Science) Second Year (P-2022)-Fourth
+Semester Examination: Apr/May-2024
+Name: HONRAO ASMITA
+Mother's Name: SUNANDA
+SHIVSHANKAR
+PRN: 2022015200757173
+Seat Number: CAP040056
+College: Deogiri College, Chhatrapati Sambhajinagar, Chhatrapati
+Sambhajinagar (03)
+Exam Center: 501-Z3
+Exam Venue Code: 05
+Paper
+Paper Name
+Credits
+Grade
+Grade
+Earned
+Remark
+Code
+Obtained
+Points
+Gr
+Points
+Fourth
+Seat Number : CAP040056
+Exam: Apr/May-2024
+Semester
+TC005401
+Core Java
+2.00
+A+
+7.99
+15.98
+E,C
+TC005402
+Data Warehousing
+2.00
+A++
+8.99
+17.98
+E,C
+TC005403
+Computer Networks
+2.00
+A+
+7.99
+15.98
+E,C
+TC005404
+Software Engineering
+2.00
+A
+6.99
+13.98
+E,C
+TC005405
+Data Analytics
+2.00
+A
+6.99
+13.98
+E,C
+TC005406
+Open Source Web Application
+2.00
+A+
+7.99
+15.98
+E,C
+Development
+TC005407
+Communication Skill English-IV
+3.00
+A+
+7.99
+23.97
+E,C
+TC005409
+Hindi
+3.00
+A++
+8.99
+26.97
+E,C
+TC005412
+(C) Basic Python Programming
+2.00
+A++
+8.99
+17.98
+E,C
+PC005401
+Lab Course based on TC005301,
+6.00
+0
+10.00
+60.00
+E.C
+C02
+C0402
+Lab Course based on TC005303,
+6.00
+0
+10.00
+60.00
+E,C
+TC005304,TC005403,TC005404
+PC005403
+Lab Course based on TC005305,
+6.00
+0
+10.00
+60.00
+E,C
+TC005306,TC005405,TC005406
+Credits:38.00
+EGP:342.80
+SGPA:9.02
+Status:PASS
+Grade:O
+Third Semester (Seat No: CAP030065 Exam Event: Oct/Nov-2023)
+Credits:20.00
+EGP:164.82
+SGPA:8.24
+Status:PASS
+Grade:A++
+Second Semester (Seat No: CAP020054 Exam Event: Apr/May-2023)
+Credits:27.00
+EGP:211.75
+SGPA:7.84
+Status:PASS
+Grade:A+
+First Semester (Seat No: 3005100064 Exam Event: Oct/Nov-2022)
+Credits:18.00
+EGP:141.82
+SGPA:7.88
+Status:PASS
+Abbreviations: Gr: Grade, SGPA: Semester Grade Point Average, CGPA: Cumulative Grade Point
+Grade:A+
+Average, EGP: Earned Grade Points, E: Exempted, C: Current Appearance, X: Past Performance,
+N: Not Exempted, #:Additional Credits-Honors/Minor
+Result Declared On: 21 Jun 2024
+Disclaimer:
+1) These marks/Grades and result information is purely a 'Provisional Statement of Marks/
+Grade'.
+2)This Provisional statement shall not be used for any other purpose other than admission,
+filling exam forms and redressal procedure.
+3)Concerned Faculty/College admitting the student must verify the true state of this Provisional
+Result from http://localhost/.
+4)In case of any query, please contact university authorities for further clarifications.
+Director,
+Board of
+Examinations &
+Evaluation

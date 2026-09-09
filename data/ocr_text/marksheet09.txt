@@ -1,0 +1,149 @@
+about.blank
+"IE=Edge" />
+Statement of Grade for
+Examination: Apr/May-2024
+Name: HONRAO ASMITA SHIVSHANKAR Mother's Name: SUNANDA
+PRN: 2022015200757173
+Seat Number: CAP040056
+College: Deogiri College, Chhatrapati Sambhajinagar, Chhatrapati Sambhajinagar (03)
+Exam Center: 501-Z3
+Exam Venue Code: 05
+Grade
+Earned
+Remark
+Paper
+Credits
+Grade
+Paper Name
+Obtained
+Points
+Gr
+Code
+Points
+Fourth
+Seat Number : CAP040056
+Exam: Apr/May-2024
+Semester
+7.99
+15.98
+E,C
+Core Java
+2.00
+A+
+TC005401
+8.99
+17.98
+E,C
+Data Warehousing
+2.00
+A++
+TC005402
+A+
+7.99
+15.98
+E,C
+TC005403
+2.00
+Computer Networks
+2.00
+A
+6.99
+13.98
+E,C
+TC005404
+Software Engineering
+2.00
+A
+6.99
+13.98
+E,C
+TC005405
+Data Analytics
+2.00
+A+
+7.99
+15.98
+E,C
+TC005406
+Open Source Web Application
+Development
+23.97
+E,C
+3.00
+A+
+7.99
+TC005407
+Communication Skill English-IV
+26.97
+E,C
+TC005409
+Hindi
+3.00
+A++
+8.99
+17.98
+E,C
+2.00
+(C) Basic Python Programming
+A++
+TC005412
+8.99
+6.00
+60.00
+E,C
+O
+10.00
+PC005401
+Lab Course based on TC005301,
+TC005302,TC005401,TC005402
+6.00
+0
+10.00
+60.00
+E,C
+PC005402
+Lab Course based on TC005303,
+TC005304,TC005403,TC005404
+6.00
+0
+10.00
+60.00
+E,C
+PC005403
+Lab Course based on TC005305,
+TC005306,TC005405,TC005406
+EGP:342.80
+SGPA:9.02
+Status:PASS
+Grade:O
+Credits:38.00
+Third Semester (Seat No: CAP030065 Exam Event: Oct/Nov-2023)
+Credits:20.00
+EGP:164.82
+SGPA:8.24
+Status:PASS
+Grade:A++
+Second Semester (Seat No: CAP020054 Exam Event: Apr/May-2023)
+EGP:211.75
+SGPA:7.84
+Status:PASS
+Grade:A+
+Credits:27.00
+First Semester (Seat No: 3005100064 Exam Event: Oct/Nov-2022)
+Credits:18.00
+EGP:141.82
+SGPA:7.88
+Status:PASS
+Grade:A+
+Abbreviations: Gr: Grade, SGPA: Semester Grade Point Average, CGPA: Cumulative Grade Point Average,
+EGP: Earned Grade Points, E: Exempted, C: Current Appearance, X: Past Performance, N: Not Exempted,
+#:Additional Credits-Honors/Minor
+Result Declared On: 21 Jun 2024
+Disclaimer:
+1) These marks/Grades and result information is purely a Provisional Statement of Marks/ Grade’.
+2)This Provisional statement shall not be used for any other purpose other than admission, filling exam forms
+and redressal procedure.
+http://localhost/.
+Director,
+Board of Examinations
+& Evaluation
