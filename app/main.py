@@ -6,6 +6,9 @@ from fastapi.staticfiles import StaticFiles
 import os
 import shutil
 
+from app.ocr import extract_text
+from app.classifier import classify_document
+
 
 app = FastAPI(
     title="AI Document Processing System"
@@ -49,7 +52,6 @@ async def upload_document(
 ):
 
     allowed_extensions = {
-
         ".pdf",
         ".jpg",
         ".jpeg",
@@ -66,9 +68,9 @@ async def upload_document(
     if extension not in allowed_extensions:
 
         return templates.TemplateResponse(
-            "index.html",
-            {
-                "request": request,
+            request=request,
+            name="index.html",
+            context={
                 "error": "Only PDF, JPG, JPEG and PNG files are allowed."
             }
         )
@@ -91,10 +93,59 @@ async def upload_document(
         )
 
 
+    # -----------------------------
+    # OCR
+    # -----------------------------
+
+    try:
+
+        extracted_text = extract_text(
+            file_path
+        )
+
+    except Exception as e:
+
+        return templates.TemplateResponse(
+            request=request,
+            name="index.html",
+            context={
+                "error": f"OCR failed: {str(e)}"
+            }
+        )
+
+
+    # -----------------------------
+    # ML CLASSIFICATION
+    # -----------------------------
+
+    try:
+
+        document_type = classify_document(
+            extracted_text
+        )
+        print("DEBUG DOCUMENT TYPE:", document_type)
+
+    except Exception as e:
+
+        return templates.TemplateResponse(
+            request=request,
+            name="index.html",
+            context={
+                "error": f"Classification failed: {str(e)}"
+            }
+        )
+
+
+    # -----------------------------
+    # DISPLAY RESULT
+    # -----------------------------
+
     return templates.TemplateResponse(
-    request=request,
-    name="index.html",
-    context={
-        "message": f"{filename} uploaded successfully!"
-    }
-)
+        request=request,
+        name="index.html",
+        context={
+            "message": f"{filename} processed successfully!",
+            "document_type": document_type,
+            "extracted_text": extracted_text
+        }
+    )

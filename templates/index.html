@@ -1,3 +1,4 @@
+html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -53,6 +54,36 @@
 
             {% endif %}
 
+
+            {% if document_type %}
+
+            <div class="result">
+
+    <h2>Document Classification Result</h2>
+
+    <p>
+        <strong>Document Type:</strong>
+        {{ document_type }}
+    </p>
+
+</div>
+
+            {% endif %}
+
+
+            {% if extracted_text %}
+
+            <div class="result">
+
+                <h2>Extracted Text</h2>
+
+                <pre>{{ extracted_text }}</pre>
+
+            </div>
+
+            {% endif %}
+
+
             {% if error %}
 
             <p class="error">
@@ -68,3 +99,4 @@
 </body>
 
 </html>
+
