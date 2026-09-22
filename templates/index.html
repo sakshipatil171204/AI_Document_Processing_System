@@ -1,4 +1,3 @@
-html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -70,6 +69,36 @@ html
 
             {% endif %}
 
+{% if extracted_details %}
+<div class="result">
+    <h2>Extracted Information</h2>
+
+    {% for key, value in extracted_details.items() %}
+
+        {% if key == "skills" %}
+            <p>
+                <strong>Skills:</strong>
+                {{ value | join(", ") }}
+            </p>
+
+        {% elif key == "subject_marks" %}
+            <p><strong>Subject Marks:</strong></p>
+            <ul>
+                {% for subject, marks in value.items() %}
+                    <li>{{ subject }}: {{ marks }}</li>
+                {% endfor %}
+            </ul>
+
+        {% else %}
+            <p>
+                <strong>{{ key.replace("_", " ").title() }}:</strong>
+                {{ value }}
+            </p>
+        {% endif %}
+
+    {% endfor %}
+</div>
+{% endif %}
 
             {% if extracted_text %}
 

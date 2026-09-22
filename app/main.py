@@ -9,6 +9,14 @@ import shutil
 from app.ocr import extract_text
 from app.classifier import classify_document
 
+from app.extractor import (
+    extract_invoice_details,
+    extract_resume_details,
+    extract_marksheet_details,
+    extract_resume_skills,
+    extract_subject_marks
+)
+
 
 app = FastAPI(
     title="AI Document Processing System"
@@ -135,17 +143,39 @@ async def upload_document(
             }
         )
 
+    extracted_details = {}
 
+    try:
+        if document_type.lower() == "invoice":
+            extracted_details = extract_invoice_details(extracted_text)
+
+        elif document_type.lower() == "resume":
+            extracted_details = extract_resume_details(extracted_text)
+            extracted_details["skills"] = extract_resume_skills(extracted_text)
+
+        elif document_type.lower() == "marksheet":
+            extracted_details = extract_marksheet_details(extracted_text)
+            extracted_details["subject_marks"] = extract_subject_marks(extracted_text)
+
+        print("DEBUG EXTRACTED DETAILS:", extracted_details)
+
+    except Exception as e:
+        return templates.TemplateResponse(
+            request=request,
+            name="index.html",
+            context={"error": f"Information extraction failed: {str(e)}"}
+        )
     # -----------------------------
     # DISPLAY RESULT
     # -----------------------------
 
     return templates.TemplateResponse(
-        request=request,
-        name="index.html",
-        context={
-            "message": f"{filename} processed successfully!",
-            "document_type": document_type,
-            "extracted_text": extracted_text
-        }
-    )
+    request=request,
+    name="index.html",
+    context={
+        "message": f"{filename} processed successfully!",
+        "document_type": document_type,
+        "extracted_text": extracted_text,
+        "extracted_details": extracted_details
+    }
+)
