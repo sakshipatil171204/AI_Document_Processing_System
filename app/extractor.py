@@ -327,99 +327,74 @@ def extract_resume_skills(text):
 
 def extract_marksheet_details(text):
     """
-    Extract important information from marksheet text.
-    Supports simple and real-world marksheet formats.
+    Extract important information from different marksheet formats.
+    Supports simple marksheets, HSC-style marksheets,
+    and university Statements of Grade.
     """
 
     details = {}
 
-    lines = [line.strip() for line in text.splitlines()]
+    lines = [
+        line.strip()
+        for line in text.splitlines()
+        if line.strip()
+    ]
 
-    # -------------------------------------------------
-    # Student Name
-    # -------------------------------------------------
+    # ---------------------------------
+    # STUDENT NAME
+    # ---------------------------------
 
     student_name = re.search(
-        r"Student Name:\s*(.+)",
+        r"(?:Student Name|Name)\s*:\s*(.+)",
         text,
         re.IGNORECASE
     )
 
-    if not student_name:
-        for i, line in enumerate(lines):
-            if "FULL NAM" in line.upper():
-                for next_line in lines[i + 1:i + 4]:
-                    if re.fullmatch(
-                        r"[A-Za-z][A-Za-z .'-]+",
-                        next_line
-                    ):
-                        student_name = re.match(
-                            r"(.+)",
-                            next_line
-                        )
-                        break
+    if student_name:
+        details["student_name"] = student_name.group(1).strip()
 
-    # -------------------------------------------------
-    # Roll Number
-    # -------------------------------------------------
+    # ---------------------------------
+    # ROLL / SEAT NUMBER
+    # ---------------------------------
 
     roll_number = re.search(
-        r"Roll Number:\s*(.+)",
+        r"(?:Roll Number|Roll No|Seat Number|Seat No)\s*:\s*([A-Za-z0-9]+)",
         text,
         re.IGNORECASE
     )
 
-    if not roll_number:
-        for i, line in enumerate(lines):
-            if "SEATNO" in line.upper():
-                for next_line in lines[i + 1:i + 6]:
-                    if re.fullmatch(
-                        r"[A-Z]\d{5,10}",
-                        next_line
-                    ):
-                        roll_number = re.match(
-                            r"(.+)",
-                            next_line
-                        )
-                        break
+    if roll_number:
+        details["roll_number"] = roll_number.group(1).strip()
 
-    # -------------------------------------------------
-    # Total Marks
-    # -------------------------------------------------
+    # ---------------------------------
+    # PRN
+    # ---------------------------------
+
+    prn = re.search(
+        r"PRN\s*:\s*([A-Za-z0-9]+)",
+        text,
+        re.IGNORECASE
+    )
+
+    if prn:
+        details["prn"] = prn.group(1).strip()
+
+    # ---------------------------------
+    # TOTAL
+    # ---------------------------------
 
     total = re.search(
-        r"Total:\s*(\d+(?:\.\d+)?)",
+        r"\bTotal\s*(?:Marks)?\s*:\s*(\d+(?:\.\d+)?)",
         text,
         re.IGNORECASE
     )
 
-    if not total:
-        for i, line in enumerate(lines):
-            if line.lower() == "total marks":
-                numeric_values = []
+    if total:
+        details["total"] = total.group(1).strip()
 
-                for nearby_line in lines[i - 6:i + 3]:
-                    match = re.fullmatch(
-                        r"\d{1,4}",
-                        nearby_line
-                    )
-
-                    if match:
-                        numeric_values.append(
-                            match.group(0)
-                        )
-
-                if numeric_values:
-                    total = re.match(
-                        r"(\d+)",
-                        numeric_values[-1]
-                    )
-
-                break
-
-    # -------------------------------------------------
-    # Percentage
-    # -------------------------------------------------
+    # ---------------------------------
+    # PERCENTAGE
+    # ---------------------------------
 
     percentage = re.search(
         r"Percentage\s*:?\s*(\d+(?:\.\d+)?)\s*%?",
@@ -427,44 +402,56 @@ def extract_marksheet_details(text):
         re.IGNORECASE
     )
 
-    if not percentage:
-        for i, line in enumerate(lines):
-            if "PERCENTAGE" in line.upper():
-                for next_line in lines[i + 1:i + 5]:
-                    match = re.fullmatch(
-                        r"\d+(?:\.\d+)",
-                        next_line
-                    )
-
-                    if match:
-                        percentage = re.match(
-                            r"(.+)",
-                            next_line
-                        )
-                        break
-
-    # -------------------------------------------------
-    # Store extracted information
-    # -------------------------------------------------
-
-    if student_name:
-        details["student_name"] = student_name.group(1).strip()
-
-    if roll_number:
-        details["roll_number"] = roll_number.group(1).strip()
-
-    if total:
-        details["total"] = total.group(1).strip()
-
     if percentage:
-        details["percentage"] = percentage.group(1).strip() + "%"
+        details["percentage"] = (
+            percentage.group(1).strip() + "%"
+        )
 
-    # -------------------------------------------------
-    # Result
-    # -------------------------------------------------
+    # ---------------------------------
+    # CREDITS
+    # ---------------------------------
+
+    credits = re.search(
+        r"Credits\s*:\s*(\d+(?:\.\d+)?)",
+        text,
+        re.IGNORECASE
+    )
+
+    if credits:
+        details["credits"] = credits.group(1).strip()
+
+    # ---------------------------------
+    # EGP
+    # ---------------------------------
+
+    egp = re.search(
+        r"EGP\s*:\s*(\d+(?:\.\d+)?)",
+        text,
+        re.IGNORECASE
+    )
+
+    if egp:
+        details["egp"] = egp.group(1).strip()
+
+    # ---------------------------------
+    # SGPA
+    # ---------------------------------
+
+    sgpa = re.search(
+        r"SGPA\s*:\s*(\d+(?:\.\d+)?)",
+        text,
+        re.IGNORECASE
+    )
+
+    if sgpa:
+        details["sgpa"] = sgpa.group(1).strip()
+
+    # ---------------------------------
+    # RESULT / STATUS
+    # ---------------------------------
 
     result = re.search(
-        r"\b(PASS|FAIL)\b",
+        r"(?:Result|Status)\s*:\s*(PASS|FAIL)",
         text,
         re.IGNORECASE
     )
@@ -475,117 +462,104 @@ def extract_marksheet_details(text):
     return details
 def extract_subject_marks(text):
     """
-    Extract subject names and obtained marks
-    from simple and real-world marksheet formats.
+    Extract subject names and earned grade points
+    from a university Statement of Grade.
     """
 
     subject_marks = {}
 
-    lines = text.splitlines()
-
-    # Subjects that are commonly non-numeric grade subjects.
-    grade_subject_patterns = [
-        "HEALTH & PHYSICAL EDUCATION",
-        "DEFENCE STUDIES",
-        "SELF DEVELOPMENT & ART APPRE",
-        "ENV. EDU. & WATER SECURITY"
+    lines = [
+        line.strip()
+        for line in text.splitlines()
+        if line.strip()
     ]
 
-    i = 0
+    subject_codes = re.compile(
+        r"^[A-Z]{2}\d{6}$"
+    )
 
-    while i < len(lines):
+    for i, line in enumerate(lines):
 
-        line = lines[i].strip()
-
-        # -------------------------------------------------
-        # Format 1: Simple format
-        # Example:
-        # Python: 82
-        # DBMS: 78
-        # -------------------------------------------------
-
-        simple_match = re.match(
-            r"^(.+):\s*(\d+(?:\.\d+)?)$",
-            line
-        )
-
-        if simple_match:
-            subject = simple_match.group(1).strip()
-            marks = simple_match.group(2).strip()
-
-            if subject.lower() not in [
-                "total",
-                "percentage"
-            ]:
-                subject_marks[subject] = marks
-
-            i += 1
+        if not subject_codes.fullmatch(line):
             continue
 
-        # -------------------------------------------------
-        # Format 2: Real marksheet
-        # Example:
-        # 01 MARATHI (1ST LANG)
-        # 100
-        # 089
-        # EIGHTYNINE
-        # -------------------------------------------------
+        subject_name_parts = []
 
-        subject_match = re.match(
-            r"^\d{1,3}\s+(.+)$",
-            line
+        # ---------------------------------
+        # FIND SUBJECT NAME
+        # ---------------------------------
+
+        for next_line in lines[i + 1:i + 5]:
+
+            if subject_codes.fullmatch(next_line):
+                break
+
+            if re.fullmatch(
+                r"\d+(?:\.\d+)?",
+                next_line
+            ):
+                continue
+
+            if re.fullmatch(
+                r"[A-Z+]+",
+                next_line
+            ):
+                continue
+
+            subject_name_parts.append(next_line)
+
+        if not subject_name_parts:
+            continue
+
+        subject_name = " ".join(
+            subject_name_parts
         )
 
-        if subject_match:
+        # ---------------------------------
+        # FIND GRADE POINT
+        # ---------------------------------
 
-            subject = subject_match.group(1).strip()
+        decimal_values = []
 
-            # Ignore non-subject headings
-            ignored_words = [
-                "CANDIDATE",
-                "SUBJECT CODE",
-                "TOTAL",
-                "SEAT NO",
-                "CENTRE NO",
-                "DIST.",
-                "MONTH",
-                "STREAM"
-            ]
+        for next_line in lines[i + 1:i + 12]:
 
-            if not any(
-                word in subject.upper()
-                for word in ignored_words
-            ):
+            match = re.fullmatch(
+                r"\d+\.\d+",
+                next_line
+            )
 
-                # Look at the next few lines for numeric marks.
-                nearby_lines = lines[i + 1:i + 5]
+            if match:
+                value = float(
+                    match.group(0)
+                )
 
-                numeric_values = []
-
-                for next_line in nearby_lines:
-
-                    next_line = next_line.strip()
-
-                    # Only accept standalone numbers.
-                    number_match = re.fullmatch(
-                        r"\d{1,3}",
-                        next_line
+                if 0 <= value <= 10:
+                    decimal_values.append(
+                        match.group(0)
                     )
 
-                    if number_match:
-                        numeric_values.append(
-                            number_match.group(0)
-                        )
+        # In this marksheet the values appear as:
+        #
+        # Credits
+        # Grade
+        # Grade Points
+        # Earned Points
+        #
+        # Example:
+        # 2.00
+        # A+
+        # 7.99
+        # 15.98
+        #
+        # Therefore the second decimal value
+        # in the sequence is the Grade Point.
 
-                # Usually:
-                # first number = maximum marks
-                # second number = obtained marks
-                if len(numeric_values) >= 2:
+        if len(decimal_values) >= 2:
 
-                    obtained_marks = numeric_values[1]
+            grade_point = decimal_values[1]
 
-                    subject_marks[subject] = obtained_marks
-
-        i += 1
+            subject_marks[
+                subject_name
+            ] = grade_point
 
     return subject_marks

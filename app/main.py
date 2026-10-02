@@ -22,10 +22,15 @@ from app.validator import (
     validate_resume,
     validate_marksheet
 )
+from app.database import (
+    create_database,
+    save_document,
+    get_all_documents
+)
 app = FastAPI(
     title="AI Document Processing System"
 )
-
+create_database()
 
 templates = Jinja2Templates(
     directory="templates"
@@ -218,7 +223,7 @@ async def upload_document(
                 extracted_details
             )
 
-        print(
+            print(
             "DEBUG VALIDATION RESULT:",
             validation_result
         )
@@ -230,6 +235,31 @@ async def upload_document(
             name="index.html",
             context={
                 "error": f"Validation failed: {str(e)}"
+            }
+        )
+
+    # -----------------------------
+    # DATABASE
+    # -----------------------------
+
+    try:
+
+        save_document(
+            filename,
+            document_type,
+            extracted_details,
+            validation_result
+        )
+
+        print("Document saved to database.")
+
+    except Exception as e:
+
+        return templates.TemplateResponse(
+            request=request,
+            name="index.html",
+            context={
+                "error": f"Database save failed: {str(e)}"
             }
         )
 
@@ -246,5 +276,17 @@ async def upload_document(
             "extracted_text": extracted_text,
             "extracted_details": extracted_details,
             "validation_result": validation_result
+        }
+    )
+@app.get("/documents", response_class=HTMLResponse)
+async def view_documents(request: Request):
+
+    documents = get_all_documents()
+
+    return templates.TemplateResponse(
+        request=request,
+        name="documents.html",
+        context={
+            "documents": documents
         }
     )

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Processed Documents</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Processed Documents</h1>
+
+        <p>
+            Documents stored in the database
+        </p>
+
+        {% if documents %}
+
+        <div class="result">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>File Name</th>
+                        <th>Document Type</th>
+                        <th>Validation Status</th>
+                        <th>Validation Message</th>
+                        <th>Processed At</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    {% for document in documents %}
+
+                    <tr>
+                        <td>{{ document["id"] }}</td>
+
+                        <td>
+                            {{ document["file_name"] }}
+                        </td>
+
+                        <td>
+                            {{ document["document_type"] }}
+                        </td>
+
+                        <td>
+                            {{ document["validation_status"] }}
+                        </td>
+
+                        <td>
+                            {{ document["validation_message"] }}
+                        </td>
+
+                        <td>
+                            {{ document["processed_at"] }}
+                        </td>
+                    </tr>
+
+                    {% endfor %}
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        {% else %}
+
+        <div class="result">
+            <p>No documents have been processed yet.</p>
+        </div>
+
+        {% endif %}
+
+        <br>
+
+        <a href="/">
+            <button type="button">
+                Back to Upload
+            </button>
+        </a>
+
+    </div>
+
+</body>
+</html>

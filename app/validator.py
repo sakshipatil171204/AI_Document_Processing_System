@@ -4,9 +4,7 @@ def validate_invoice(details):
     """
 
     required_fields = [
-        "invoice_number",
-        "date",
-        "total"
+        "total_amount"
     ]
 
     missing_fields = []
@@ -58,13 +56,28 @@ def validate_resume(details):
 def validate_marksheet(details):
     """
     Validate extracted marksheet information.
+
+    Supports:
+    1. Marksheets with total and percentage.
+    2. University Statements of Grade with credits, EGP and SGPA.
     """
 
-    required_fields = [
-        "student_name",
-        "total",
-        "percentage"
-    ]
+    # University Statement of Grade
+    if details.get("sgpa") or details.get("egp") or details.get("credits"):
+
+        required_fields = [
+            "student_name",
+            "result"
+        ]
+
+    # Regular marksheet
+    else:
+
+        required_fields = [
+            "student_name",
+            "total",
+            "percentage"
+        ]
 
     missing_fields = []
 

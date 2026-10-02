@@ -109,6 +109,25 @@
                 <pre>{{ extracted_text }}</pre>
 
             </div>
+            {% if validation_result %}
+<div class="result">
+    <h2>Validation Result</h2>
+
+    <p>
+        <strong>Status:</strong>
+        {% if validation_result.valid %}
+            Valid
+        {% else %}
+            Invalid
+        {% endif %}
+    </p>
+
+    <p>
+        <strong>Message:</strong>
+        {{ validation_result.message }}
+    </p>
+</div>
+{% endif %}
 
             {% endif %}
 
@@ -120,7 +139,11 @@
             </p>
 
             {% endif %}
-
+            <a href="/documents">
+    <button type="button">
+        View Processed Documents
+    </button>
+</a>
         </div>
 
     </div>

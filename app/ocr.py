@@ -4,8 +4,13 @@ import json
 from pdf2image import convert_from_path
 
 # Create OCR object
-ocr = PaddleOCR(lang="en")
-
+ocr = PaddleOCR(
+    text_detection_model_name="PP-OCRv5_mobile_det",
+    text_recognition_model_name="PP-OCRv5_mobile_rec",
+    use_doc_orientation_classify=False,
+    use_doc_unwarping=False,
+    use_textline_orientation=False
+)
 
 def extract_text(file_path):
 
@@ -52,6 +57,7 @@ def extract_text(file_path):
 
         pages = convert_from_path(
     file_path,
+    dpi=150,
     poppler_path=r"C:\Users\Devyani\Downloads\Release-26.09.0-0\poppler-26.09.0\Library\bin"
 )
         print(f"Number of PDF pages: {len(pages)}")
